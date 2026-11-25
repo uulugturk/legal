@@ -3,41 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yasal Sayfalar</title>
+<title>Yasal Sayfalar · Utku ULUĞTÜRK</title>
+<meta name="description" content="Sarmaş, Partay ve Walley uygulamalarının gizlilik politikaları, kullanım koşulları ve destek iletişimi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F6F3; --surface:#FFFFFF; --ink:#17191C; --muted:#5C6168; --line:#E3E1DC;
+  --accent:#1F3A5F; --accent-soft:#E8EDF3; --focus:#2F5A8F;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#111316; --surface:#181B1F; --ink:#ECEDEF; --muted:#9BA1A9; --line:#2A2E34;
+    --accent:#9DB7D8; --accent-soft:#1D2733; --focus:#B9CDE6; color-scheme:dark}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:400 16px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+header{padding-block:72px 40px;border-bottom:1px solid var(--line)}
+.owner{margin:0 0 14px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font:600 clamp(36px,6vw,48px)/1.1 Newsreader,Georgia,"Times New Roman",serif;letter-spacing:-.01em;text-wrap:balance}
+.lede{margin:14px 0 0;max-width:56ch;color:var(--muted);font-size:17px}
+main{padding-block:16px 24px}
+section.app{padding-block:32px;border-bottom:1px solid var(--line);display:grid;gap:16px}
+.app-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+h2{margin:0;font:600 26px/1.2 Newsreader,Georgia,serif;letter-spacing:-.005em}
+.tag{font-size:13px;font-weight:500;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:999px;white-space:nowrap}
+.app p{margin:0;color:var(--muted);max-width:62ch}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.links a{display:block;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  color:var(--ink);text-decoration:none;transition:border-color .15s,transform .15s}
+.links a:hover{border-color:var(--accent);transform:translateY(-1px)}
+.links a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.links strong{display:flex;justify-content:space-between;gap:8px;font-weight:600;font-size:15px}
+.links strong::after{content:"→";color:var(--accent)}
+.links span{display:block;margin-top:4px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.contact{margin-block:40px 8px;padding:28px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;display:grid;gap:10px}
+.contact h2{font-size:24px}
+.contact p{margin:0;color:var(--muted);max-width:62ch}
+.mail{font-size:18px;font-weight:600;color:var(--accent);text-decoration:none;word-break:break-all}
+.mail:hover{text-decoration:underline}
+footer{padding-block:32px 56px;color:var(--muted);font-size:13.5px}
+@media (max-width:480px){header{padding-block:48px 28px}section.app{padding-block:26px}.contact{padding:22px}}
+</style>
 </head>
 <body>
+<div class="wrap">
 <header>
+  <p class="owner">Utku ULUĞTÜRK · Uygulama geliştirici</p>
   <h1>Yasal Sayfalar</h1>
-  <p>Uygulamaların gizlilik politikaları ve kullanım koşulları</p>
+  <p class="lede">Uygulamalarımın gizlilik politikaları, kullanım koşulları ve destek iletişimi tek yerde.</p>
 </header>
 
 <main>
-  <h2 style="color:#3a1475">Partay — Parti Oyunları</h2>
-  <div class="cards">
-    <a class="card" href="partay/privacy.html">Gizlilik Politikası
-      <span>Hangi veriler işleniyor, neler toplanmıyor</span>
-    </a>
-    <a class="card" href="partay/terms.html">Kullanım Koşulları
-      <span>Tek seferlik satın alım, içerik ve sorumluluk</span>
-    </a>
-  </div>
-  <h2 style="color:#3a1475">Sarmaş — Çiftler İçin</h2>
-  <div class="cards">
-    <a class="card" href="sarmas/privacy.html">Gizlilik Politikası
-      <span>Hangi veriler nerede saklanıyor, nasıl silinir</span>
-    </a>
-    <a class="card" href="sarmas/terms.html">Kullanım Koşulları
-      <span>Premium üyelik, eşleşme ve sorumluluk</span>
-    </a>
-  </div>
+  <section class="app" aria-labelledby="sarmas">
+    <div class="app-head"><h2 id="sarmas">Sarmaş</h2><span class="tag">Çiftler İçin</span></div>
+    <p>Çiftler için sorular, oyunlar, anılar ve planlar. İki telefonda eşleşme, Premium abonelik ve ömür boyu seçeneği.</p>
+    <div class="links">
+      <a href="sarmas/privacy.html"><strong>Gizlilik Politikası</strong><span>Hangi veriler nerede saklanıyor, nasıl silinir</span></a>
+      <a href="sarmas/terms.html"><strong>Kullanım Koşulları</strong><span>Premium üyelik, eşleşme ve sorumluluk</span></a>
+    </div>
+  </section>
+
+  <section class="app" aria-labelledby="partay">
+    <div class="app-head"><h2 id="partay">Partay</h2><span class="tag">Parti Oyunları</span></div>
+    <p>Arkadaşlarla oynanan parti oyunları. Tek seferlik satın alım.</p>
+    <div class="links">
+      <a href="partay/privacy.html"><strong>Gizlilik Politikası</strong><span>Hangi veriler işleniyor, neler toplanmıyor</span></a>
+      <a href="partay/terms.html"><strong>Kullanım Koşulları</strong><span>Tek seferlik satın alım, içerik ve sorumluluk</span></a>
+    </div>
+  </section>
+
+  <section class="app" aria-labelledby="walley">
+    <div class="app-head"><h2 id="walley">Walley</h2><span class="tag">Bütçe Takibi</span></div>
+    <p>Gelir ve gider takibi. Veriler yalnızca telefonda saklanır; Premium abonelik.</p>
+    <div class="links">
+      <a href="https://uulugturk.github.io/walley-legal/privacy.html"><strong>Gizlilik Politikası</strong><span>Veriler yalnızca telefonunda kalır</span></a>
+      <a href="https://uulugturk.github.io/walley-legal/terms.html"><strong>Kullanım Koşulları</strong><span>Premium abonelik ve sorumluluk</span></a>
+      <a href="https://uulugturk.github.io/walley-legal/"><strong>Destek</strong><span>Sık sorulan sorular</span></a>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="destek">
+    <h2 id="destek">Destek ve İletişim</h2>
+    <p>Bir sorun mu yaşıyorsun ya da önerin mi var? Uygulamanın adını yazarak e-posta gönder; genellikle birkaç gün içinde dönüş yaparım.</p>
+    <a class="mail" href="mailto:utkuulugturk@gmail.com">utkuulugturk@gmail.com</a>
+    <p>Satın alma iadeleri Apple tarafından <a href="https://reportaproblem.apple.com" style="color:var(--accent)">reportaproblem.apple.com</a> üzerinden yapılır.</p>
+  </section>
 </main>
 
-<footer>
-  <p>İletişim: <a href="mailto:utkuulugturk@gmail.com">utkuulugturk@gmail.com</a></p>
-</footer>
+<footer>© 2026 Utku ULUĞTÜRK</footer>
+</div>
 </body>
 </html>
