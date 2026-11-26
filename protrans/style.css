@@ -1,0 +1,117 @@
+/* Protrans yasal sayfaları — uygulamanın kurumsal mavisi ve logosu. */
+:root {
+  --blue: #2261B0;
+  --blue-dark: #1A4C8C;
+  --blue-soft: #E9F0F9;
+  --ink: #1F2328;
+  --ink-soft: #55595F;
+  --line: #E0E3E8;
+  --surface: #FFFFFF;
+  --page: #F2F4F7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+
+header {
+  background: var(--surface);
+  border-top: 6px solid var(--blue);
+  border-bottom: 1px solid var(--line);
+  padding: 36px 20px 72px;
+  text-align: center;
+}
+
+header .logo {
+  width: 220px;
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto 22px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+header p { margin: 6px 0 0; font-size: 15px; font-weight: 500; color: var(--ink-soft); }
+
+main {
+  max-width: 740px;
+  margin: -40px auto 48px;
+  padding: 0 16px;
+}
+
+article {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 34px 32px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(34, 97, 176, 0.08);
+}
+
+article h2 {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 34px 0 6px;
+  padding-left: 12px;
+  border-left: 4px solid var(--blue);
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+article h2:first-of-type { margin-top: 12px; }
+
+article p, article li { color: var(--ink-soft); }
+article strong { color: var(--ink); font-weight: 600; }
+article ul { padding-left: 22px; }
+article li { margin-bottom: 6px; }
+article li::marker { color: var(--blue); }
+
+a { color: var(--blue); text-decoration: none; font-weight: 600; }
+a:hover { color: var(--blue-dark); text-decoration: underline; }
+
+.updated {
+  display: inline-block;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 13.5px;
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 8px;
+}
+
+.summary {
+  background: var(--blue-soft);
+  border-radius: 10px;
+  padding: 4px 20px;
+  margin: 16px 0 8px;
+}
+
+footer {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 14px;
+  padding: 0 20px 48px;
+}
+
+@media (max-width: 480px) {
+  body { font-size: 15.5px; }
+  article { padding: 24px 18px; }
+  header { padding: 28px 16px 60px; }
+  header h1 { font-size: 26px; }
+  header .logo { width: 170px; }
+}
